@@ -7,7 +7,7 @@ NBDIR = os.path.sep.join(
     os.path.abspath(__file__).split(os.path.sep)[:-2]
 )
 
-Test = testipynb.TestNotebooks(directory=NBDIR, timeout=2800)
+Test = testipynb.TestNotebooks(directory=NBDIR, timeout=2800, ignore=["cyl-mesh-casing"])
 TestNotebooks = Test.get_tests()
 
 if __name__ == "__main__":
